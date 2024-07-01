@@ -8,13 +8,26 @@
   </head>
   <body>
     <header>
-      <img src="./assets/logo-alura.png" alt="">
+      <img src="./assets/logo-alura.png" alt="logo alura" class="logoAlura"/>
     </header>
     <main>
-      <input type="text" name="text" id="text" />
+      <div class="inputWrapper">
+        <input
+          type="text"
+          name="text"
+          id="textInput"
+          placeholder="digite seu texto"
+        />
+      </div>
+      <span>Apenas letras minúsculas e sem acento</span>
+      <div class="buttonsWrapper">
+        <button class="criptografar">Criptografar</button>
+        <button class="descriptografar">Descriptografar</button>
+      </div>
     </main>
     <aside>
       <h1>Nehuma msg encontrada</h1>
     </aside>
   </body>
 </html>
+
