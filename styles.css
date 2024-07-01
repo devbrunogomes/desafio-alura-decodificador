@@ -1,85 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif; 
+  font-family: "Inter", sans-serif;
 }
 
 :root {
   font-size: 62.5%;
-  --primary-color: #F3F5FC;
-  --color-text: #0A3871;
-
+  --primary-color: #f3f5fc;
+  --color-text: #0a3871;
 }
 
-/* Conteiner Principal */
+/*-------------- Container Principal --------------*/
 body {
-  display: grid;
-  grid-template-areas: 
-    ". . . ."
-    "logo logo logo aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    "input input input aside"
-    ". . . ."  
-  ;
+  width: 100vw;
   height: 100vh;
-  max-width: 16 00px;
-  padding: 2rem 4rem 2rem 4rem;
+  max-width: 1600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
   background-color: var(--primary-color);
 }
 
-/* Header (logotipo) */
-header { 
-  grid-area: logo;   
+/*----------- Lado esquerdo com input e botões --------------*/
+main {
+  border: 1px solid red;
+  width: 70vw;
+  height: 100%;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  flex-direction: column;
 }
 
+/* Image */
+.imgContainer {
+  width: 100%;
+}
 .logoAlura {
   width: 10rem;
 }
 
-/* Lado esquerdo com input e botões */ 
-main {
-  border: 1px solid red;
-  grid-area: input;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  padding-top: 2rem; 
+/* Wrapper */
+.inputAndButtonsWrapper {
+  margin-top: 5rem;
+  margin-left: 20rem;
 }
 
-.inputWrapper {
-  border: 1px solid red;
+/* Input */
+.inputContainer {
   width: 100%;
-  height: 70vh; 
+  height: 65vh;
   display: flex;
   align-items: start;
-  justify-content: center;
 }
 
 #textInput {
-  border: 1px solid red;
-  width: 60%;
-   
+  width: 90%;
+  font-size: 3rem;
   color: var(--color-text);
   background-color: var(--primary-color);
 }
 
-/* Lado direito com a mensagem criptografrada */
+/* Span */
+.spanWrapper {
+  width: 100%;
+}
+
+/* Buttons */
+.buttonsWrapper {
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+
+  gap: 3rem;
+}
+
+button {
+  width: 45%;
+  font-size: 1.8rem;
+  padding: 1.8rem 1rem;
+  border-radius: 1.5rem;
+}
+
+/*-------------- Lado direito com a mensagem criptografrada --------------*/
 aside {
-  grid-area: aside;  
+  width: 30vw;
+  border: 1px solid red;
 }
