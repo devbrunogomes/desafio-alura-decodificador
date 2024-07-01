@@ -1,8 +1,35 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
   font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  grid-template-areas: 
+    ". . . . ."
+    "logo logo logo aside aside"
+    "input input input aside aside"
+    "input input input aside aside"
+    ". . . . ."
+  ;
+}
+
+header {
+  grid-area: logo;
+  width: 100%;
+}
+
+main {
+  grid-area: input;
+  width: 100%;
+}
+
+aside {
+  grid-area: aside;
+  width: 100%;
 }
