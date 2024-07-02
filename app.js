@@ -1,5 +1,8 @@
 //HTML elements and Values as variables
 const textarea = document.querySelector("#textInput");
+const exibitionWithoutMesage = document.querySelector("#imgSpanWrapper");
+const textExibitionDiv = document.querySelector("#textToCopyAndButton");
+const textExibitionParagraph = document.querySelector("#textExibition");
 
 //Function which will be called to encrypt the user text
 function toEncryptTheUserText() {
@@ -9,6 +12,11 @@ function toEncryptTheUserText() {
 
   //encryptation process
   let textWithCharacterChanged = changingCharacters(textNormalizated);
+
+  //displaying the encrypted text in the field on HTML
+  exibitionWithoutMesage.style.display = "none";
+  textExibitionDiv.style.display = "flex";
+  textExibitionParagraph.innerHTML = textWithCharacterChanged;
 
   console.log(textWithCharacterChanged);
 }
@@ -21,7 +29,7 @@ function validateText(textToBeValidated) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 
-  if (textInValidator.length < 0) {
+  if (textInValidator.length < 2) {
     alert("Por favor insira um texto válido");
     textarea.focus();
     return;

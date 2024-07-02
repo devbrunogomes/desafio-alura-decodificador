@@ -9,7 +9,7 @@
 
 :root {
   font-size: 62.5%;
-  --primary-color: #EFF1FA;
+  --primary-color: #eff1fa;
   --color-text-primary: #0a3871;
   --color-text-grey: #495057;
   --container-padding-desktop: 3rem;
@@ -97,12 +97,12 @@ main {
   width: 100%;
 }
 
- button {
+button {
   width: 100%;
   font-size: 1.6rem;
   padding: 2rem 1rem;
   border-width: 0.1rem;
-  border-radius: 2.5rem;  
+  border-radius: 2.5rem;
   font-weight: 300;
 }
 
@@ -115,10 +115,7 @@ main button:last-of-type {
   border-color: var(--color-text-primary);
   color: var(--color-text-primary);
   background: var(--primary-color);
-
 }
-
-
 
 /*-------------- Aside com a mensagem criptografrada --------------*/
 aside {
@@ -133,8 +130,11 @@ aside {
   box-shadow: 0px 24px 32px -8px #00000014;
 }
 
+#imgSpanWrapper {
+  display: flex;
+}
+
 .fotoPersonagem {
-  
   width: 15rem;
 }
 
@@ -151,7 +151,7 @@ aside span {
 }
 
 .textToCopyAndButton {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -160,17 +160,15 @@ aside span {
 }
 
 aside p {
-  font-size: calc(var(--font-size-principal-text)* 0.75);
+  font-size: calc(var(--font-size-principal-text) * 0.75);
   color: var(--color-text-grey);
-  
 }
 
 aside button {
   border-color: var(--color-text-primary);
   color: var(--color-text-primary);
   background: #ffffff;
-
-} 
+}
 
 /*-------------- Media queries --------------*/
 
@@ -181,7 +179,6 @@ aside button {
   }
   .inputAndButtonsWrapper {
     padding-top: 4rem;
-    
   }
 
   .buttonsWrapper {
@@ -193,10 +190,8 @@ aside button {
   }
 
   .fotoPersonagem {
-  
     width: 25rem;
   }
-
 }
 
 @media screen and (min-width: 1025px) {
@@ -208,7 +203,7 @@ aside button {
 
   header {
     width: auto;
-    max-height: 1600px;   
+    max-height: 1600px;
   }
 
   main {
@@ -223,7 +218,7 @@ aside button {
   }
 
   #textInput {
-    height: calc(100dvh - var(--container-padding-desktop)*9);
+    height: calc(100dvh - var(--container-padding-desktop) * 9);
     max-height: 1385px;
   }
 
