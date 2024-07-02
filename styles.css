@@ -16,23 +16,24 @@
 body {
   display: flex;
   justify-content: center;
+
   background-color: var(--primary-color);
-  
 }
 
 /*-------------- Container Principal --------------*/
 .container {
+  border: 1px solid red;
   display: flex;
-  gap: 5rem;
-  
-  height: 100dvh;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem 4rem;
   max-width: 1800px;
+  max-height: 1600px;
 }
 
 /*----------- Header com a Imagem --------------*/
 header {
   border: 1px solid red;
-  height: 100%;
 }
 .logoAlura {
   width: 10rem;
@@ -41,11 +42,11 @@ header {
 /*----------- Input e botões --------------*/
 main {
   border: 1px solid red;
-  
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-
 
 /* Wrapper */
 .inputAndButtonsWrapper {
@@ -55,29 +56,24 @@ main {
 
 /* Input */
 .inputContainer {
-  
   display: flex;
   align-items: start;
 }
 
 #textInput {
-  
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--color-text);
   background-color: var(--primary-color);
 }
 
 /* Span */
 .spanWrapper {
-  width: 100%;
 }
 
 /* Buttons */
 .buttonsWrapper {
   border: 1px solid red;
-  
   display: flex;
-
   gap: 3rem;
 }
 
@@ -90,4 +86,5 @@ button {
 /*-------------- Lado direito com a mensagem criptografrada --------------*/
 aside {
   border: 1px solid red;
+  max-width: 20vw;
 }
