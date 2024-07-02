@@ -7,30 +7,31 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <div class="imgContainer">
+    <div class="container">
+      <header>
         <img src="./assets/logo-alura.png" alt="logo alura" class="logoAlura" />
-      </div>
-      <div class="inputAndButtonsWrapper">
-        <div class="inputContainer">
-          <input
-            type="text"
-            name="text"
-            id="textInput"
-            placeholder="Digite seu texto"
-          />
+      </header>
+      <main>
+        <div class="inputAndButtonsWrapper">
+          <div class="inputContainer">
+            <textarea
+              name="text"
+              id="textInput"
+              placeholder="Digite seu texto"
+            ></textarea>
+          </div>
+          <div class="spanWrapper">
+            <span>Apenas letras minúsculas e sem acento</span>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="criptografar">Criptografar</button>
+            <button class="descriptografar">Descriptografar</button>
+          </div>
         </div>
-        <div class="spanWrapper">
-          <span>Apenas letras minúsculas e sem acento</span>
-        </div>
-        <div class="buttonsWrapper">
-          <button class="criptografar">Criptografar</button>
-          <button class="descriptografar">Descriptografar</button>
-        </div>
-      </div>
-    </main>
-    <aside>
-      <h1>Nehuma msg encontrada</h1>
-    </aside>
+      </main>
+      <aside>
+        <h1>Nehuma msg encontrada</h1>
+      </aside>
+    </div>
   </body>
 </html>
