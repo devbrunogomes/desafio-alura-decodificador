@@ -162,7 +162,6 @@ aside span {
   }
 
   main {
-    border: 1px solid red;
     width: 55dvw;
     height: calc(100dvh - calc(var(--container-padding-desktop) * 2));
     max-height: 1600px;
@@ -176,7 +175,6 @@ aside span {
   #textInput {
     height: calc(100dvh - var(--container-padding-desktop)*10);
     max-height: 80%;
-    border: 1px solid red;
   }
 
   aside {
