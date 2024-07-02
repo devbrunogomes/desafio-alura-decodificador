@@ -92,17 +92,24 @@ main {
   width: 100%;
 }
 
-button {
+main button {
   width: 100%;
   font-size: 1.6rem;
   padding: 2rem 1rem;
-  border-radius: 2.5rem;
+  border-radius: 2.5rem;  
   font-weight: 300;
 }
 
-button:first-of-type {
+main button:first-of-type {
   background-color: var(--color-text);
   color: white;
+}
+
+main button:last-of-type {
+  border-color: var(--color-text);
+  color: var(--color-text);
+  background: #D8DFE8;
+
 }
 
 /*-------------- Lado direito com a mensagem criptografrada --------------*/
@@ -119,6 +126,7 @@ aside {
 }
 
 .fotoPersonagem {
+  
   width: 15rem;
 }
 
@@ -128,6 +136,7 @@ aside h1 {
 }
 
 aside span {
+  margin-top: 1rem;
   font-size: 1.2rem;
   text-align: center;
 }
@@ -181,5 +190,9 @@ aside span {
     width: 20dvw;
     height: calc(100dvh - calc(var(--container-padding-desktop) * 2));
     max-height: 1600px;
+  }
+
+  .fotoPersonagem {
+    width: 30rem;
   }
 }
