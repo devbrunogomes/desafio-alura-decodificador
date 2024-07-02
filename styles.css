@@ -71,6 +71,8 @@ main {
   color: var(--color-text-primary);
   background-color: var(--primary-color);
   border: none;
+  outline: none;
+  resize: none;
 }
 
 /* Span */
