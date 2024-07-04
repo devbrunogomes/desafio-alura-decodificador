@@ -158,6 +158,7 @@ aside span {
   flex-direction: column;
   gap: 3rem;
   height: 100%;
+  width: 100%;
 }
 
 #result-exibition {
@@ -169,6 +170,7 @@ aside button {
   border-color: var(--color-text-primary);
   color: var(--color-text-primary);
   background: #ffffff;
+  width: 100%;
 }
 
 /*-------------- Media queries --------------*/
