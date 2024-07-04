@@ -54,18 +54,29 @@ function encryptingCharacters(textToBeEncrypted) {
 
 function toDecryptTheUserText() {
   const userTextToBeDecrypted = textarea.value;
-  const textDecrypted = decryptingCharacters(userTextToBeDecrypted);
+  let textDecrypted = decryptingCharacters(userTextToBeDecrypted);
 
   console.log(textDecrypted);
 }
 
 function decryptingCharacters(textToBeDecrypted) {
-  const textInDecryptingProcess = textToBeDecrypted
+  let textInDecryptingProcess = textToBeDecrypted
     .replace("enter", "e")
     .replace("imes", "i")
     .replace("ai", "a")
     .replace("ober", "o")
     .replace("ufat", "u");
 
+  // Validation process with recursion method
+  if (
+    textInDecryptingProcess.indexOf("enter") !== -1 ||
+    textInDecryptingProcess.indexOf("imes") !== -1 ||
+    textInDecryptingProcess.indexOf("ai") !== -1 ||
+    textInDecryptingProcess.indexOf("ober") !== -1 ||
+    textInDecryptingProcess.indexOf("ufat") !== -1
+  ) {
+    return decryptingCharacters(textInDecryptingProcess);
+  } else {
     return textInDecryptingProcess;
+  }
 }
