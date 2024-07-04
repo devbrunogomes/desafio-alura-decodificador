@@ -11,7 +11,7 @@ function toEncryptTheUserText() {
   const textNormalizated = validateText(textToBeValidated);
 
   //encryptation process
-  let textWithCharacterChanged = changingCharacters(textNormalizated);
+  let textWithCharacterChanged = encryptingCharacters(textNormalizated);
 
   //displaying the encrypted text in the field on HTML
   noResultArea.style.display = "none";
@@ -39,8 +39,8 @@ function validateText(textToBeValidated) {
 }
 
 //Function which will be called to change characters from user text, after validation
-function changingCharacters(textToBeChanged) {
-  const textInProcessOfChange = textToBeChanged.split("").map((lether) => {
+function encryptingCharacters(textToBeEncrypted) {
+  const textInEncryptingProcess = textToBeEncrypted.split("").map((lether) => {
     if (lether === "a") return "ai";
     if (lether === "e") return "enter";
     if (lether === "i") return "imes";
@@ -49,5 +49,23 @@ function changingCharacters(textToBeChanged) {
     return lether;
   });
 
-  return textInProcessOfChange.join("");
+  return textInEncryptingProcess.join("");
+}
+
+function toDecryptTheUserText() {
+  const userTextToBeDecrypted = textarea.value;
+  const textDecrypted = decryptingCharacters(userTextToBeDecrypted);
+
+  console.log(textDecrypted);
+}
+
+function decryptingCharacters(textToBeDecrypted) {
+  const textInDecryptingProcess = textToBeDecrypted
+    .replace("enter", "e")
+    .replace("imes", "i")
+    .replace("ai", "a")
+    .replace("ober", "o")
+    .replace("ufat", "u");
+
+    return textInDecryptingProcess;
 }
