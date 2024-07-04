@@ -165,7 +165,7 @@ aside span {
   font-size: calc(var(--font-size-principal-text) * 0.75);
   color: var(--color-text-grey);
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 aside button {
