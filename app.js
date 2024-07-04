@@ -17,8 +17,6 @@ function toEncryptTheUserText() {
   noResultArea.style.display = "none";
   resultArea.style.display = "flex";
   resultExibitionParagraph.innerHTML = textWithCharacterChanged;
-
-  console.log(textWithCharacterChanged);
 }
 
 //Function which will be called to validate the user text, changing the strangers characters
@@ -56,7 +54,10 @@ function toDecryptTheUserText() {
   const userTextToBeDecrypted = textarea.value;
   let textDecrypted = decryptingCharacters(userTextToBeDecrypted);
 
-  console.log(textDecrypted);
+  //displaying the encrypted text in the field on HTML
+  noResultArea.style.display = "none";
+  resultArea.style.display = "flex";
+  resultExibitionParagraph.innerHTML = textDecrypted;
 }
 
 function decryptingCharacters(textToBeDecrypted) {
