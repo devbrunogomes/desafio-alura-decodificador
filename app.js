@@ -1,8 +1,8 @@
 //HTML elements and Values as variables
 const textarea = document.querySelector("#textInput");
-const exibitionWithoutMesage = document.querySelector("#imgSpanWrapper");
-const textExibitionDiv = document.querySelector("#textToCopyAndButton");
-const textExibitionParagraph = document.querySelector("#textExibition");
+const noResultArea = document.querySelector("#no-result-area");
+const resultArea = document.querySelector("#result-area");
+const resultExibitionParagraph = document.querySelector("#result-exibition");
 
 //Function which will be called to encrypt the user text
 function toEncryptTheUserText() {
@@ -14,9 +14,9 @@ function toEncryptTheUserText() {
   let textWithCharacterChanged = changingCharacters(textNormalizated);
 
   //displaying the encrypted text in the field on HTML
-  exibitionWithoutMesage.style.display = "none";
-  textExibitionDiv.style.display = "flex";
-  textExibitionParagraph.innerHTML = textWithCharacterChanged;
+  noResultArea.style.display = "none";
+  resultArea.style.display = "flex";
+  resultExibitionParagraph.innerHTML = textWithCharacterChanged;
 
   console.log(textWithCharacterChanged);
 }

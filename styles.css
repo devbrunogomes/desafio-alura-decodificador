@@ -130,8 +130,9 @@ aside {
   box-shadow: 0px 24px 32px -8px #00000014;
 }
 
-#imgSpanWrapper {
+#no-result-area {
   display: flex;
+  flex-direction: column;
 }
 
 .fotoPersonagem {
@@ -150,7 +151,7 @@ aside span {
   color: var(--color-text-grey);
 }
 
-.textToCopyAndButton {
+#result-area {
   display: none;
   align-items: center;
   justify-content: space-between;
@@ -159,7 +160,7 @@ aside span {
   height: 100%;
 }
 
-aside p {
+#result-exibition {
   font-size: calc(var(--font-size-principal-text) * 0.75);
   color: var(--color-text-grey);
 }
