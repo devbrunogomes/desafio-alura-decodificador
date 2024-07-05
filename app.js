@@ -19,6 +19,9 @@ function toEncryptTheUserText() {
   noResultArea.style.display = "none";
   resultArea.style.display = "flex";
   resultExibitionParagraph.innerHTML = textWithCharacterChanged;
+
+  //clearing the text field after encryption
+  textarea.value = "";
 }
 
 //Function which will be called to validate the user text, changing the strangers characters
@@ -63,6 +66,9 @@ function toDecryptTheUserText() {
   noResultArea.style.display = "none";
   resultArea.style.display = "flex";
   resultExibitionParagraph.innerHTML = textDecrypted;
+
+  //clearing the text field after encryption
+  textarea.value = "";
 }
 
 //Function which will be called to decrypt characters from user text, after validation
@@ -101,4 +107,8 @@ function toCopyTheTextFromResultArea() {
       alert("Não foi possível copiar o texto!");
     }
   );
+
+  //Clearing the result area after copying the text
+  resultArea.style.display = "none";
+  noResultArea.style.display = "flex";
 }
