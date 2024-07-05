@@ -8,10 +8,10 @@ const resultExibitionParagraph = document.querySelector("#result-exibition");
 function toEncryptTheUserText() {
   //validation process with an external function
   let textToBeValidated = textarea.value;
-  const textNormalizated = validateText(textToBeValidated);
+  const textValidatedToBeEncrypted = validateText(textToBeValidated);
 
   //encryptation process
-  let textWithCharacterChanged = encryptingCharacters(textNormalizated);
+  let textWithCharacterChanged = encryptingCharacters(textValidatedToBeEncrypted);
 
   //displaying the encrypted text in the field on HTML
   noResultArea.style.display = "none";
@@ -23,11 +23,14 @@ function toEncryptTheUserText() {
 function validateText(textToBeValidated) {
   const textInValidator = textToBeValidated
     .trim()
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+    // .toLowerCase()
+    // .normalize("NFD")
+    // .replace(/[\u0300-\u036f]/g, "");
 
-  if (textInValidator.length < 2) {
+  const regexToValidateText = /^[a-z]+$/;
+
+
+  if (!regexToValidateText.test(textInValidator)) {
     alert("Por favor insira um texto válido");
     textarea.focus();
     return;
@@ -52,7 +55,8 @@ function encryptingCharacters(textToBeEncrypted) {
 
 function toDecryptTheUserText() {
   const userTextToBeDecrypted = textarea.value;
-  let textDecrypted = decryptingCharacters(userTextToBeDecrypted);
+  const textValidatedToBeDecrypted = validateText(userTextToBeDecrypted)
+  let textDecrypted = decryptingCharacters(textValidatedToBeDecrypted);
 
   //displaying the encrypted text in the field on HTML
   noResultArea.style.display = "none";
