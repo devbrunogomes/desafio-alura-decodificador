@@ -11,7 +11,9 @@ function toEncryptTheUserText() {
   const textValidatedToBeEncrypted = validateText(textToBeValidated);
 
   //encryptation process
-  let textWithCharacterChanged = encryptingCharacters(textValidatedToBeEncrypted);
+  let textWithCharacterChanged = encryptingCharacters(
+    textValidatedToBeEncrypted
+  );
 
   //displaying the encrypted text in the field on HTML
   noResultArea.style.display = "none";
@@ -21,14 +23,12 @@ function toEncryptTheUserText() {
 
 //Function which will be called to validate the user text, changing the strangers characters
 function validateText(textToBeValidated) {
-  const textInValidator = textToBeValidated
-    .trim()
-    // .toLowerCase()
-    // .normalize("NFD")
-    // .replace(/[\u0300-\u036f]/g, "");
+  const textInValidator = textToBeValidated.trim();
+  // .toLowerCase()
+  // .normalize("NFD")
+  // .replace(/[\u0300-\u036f]/g, "");
 
   const regexToValidateText = /^[a-z]+$/;
-
 
   if (!regexToValidateText.test(textInValidator)) {
     alert("Por favor insira um texto válido");
@@ -56,7 +56,7 @@ function encryptingCharacters(textToBeEncrypted) {
 //Function which will be called to decrypt the user text
 function toDecryptTheUserText() {
   const userTextToBeDecrypted = textarea.value;
-  const textValidatedToBeDecrypted = validateText(userTextToBeDecrypted)
+  const textValidatedToBeDecrypted = validateText(userTextToBeDecrypted);
   let textDecrypted = decryptingCharacters(textValidatedToBeDecrypted);
 
   //displaying the encrypted text in the field on HTML
@@ -86,4 +86,19 @@ function decryptingCharacters(textToBeDecrypted) {
   } else {
     return textInDecryptingProcess;
   }
+}
+
+//Function which will be called to copy the text from result area
+function toCopyTheTextFromResultArea() {
+  const textToBeCopied = resultExibitionParagraph.innerHTML;
+
+  navigator.clipboard.writeText(textToBeCopied).then(
+    () => {
+      alert("Texto copiado com sucesso!");
+    },
+    (err) => {
+      console.error("Error ao copiar texto: ", err);
+      alert("Não foi possível copiar o texto!");
+    }
+  );
 }
