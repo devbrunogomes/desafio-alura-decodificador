@@ -39,7 +39,7 @@ function validateText(textToBeValidated) {
   return textInValidator;
 }
 
-//Function which will be called to change characters from user text, after validation
+//Function which will be called to encrypt characters from user text, after validation
 function encryptingCharacters(textToBeEncrypted) {
   const textInEncryptingProcess = textToBeEncrypted.split("").map((lether) => {
     if (lether === "a") return "ai";
@@ -53,6 +53,7 @@ function encryptingCharacters(textToBeEncrypted) {
   return textInEncryptingProcess.join("");
 }
 
+//Function which will be called to decrypt the user text
 function toDecryptTheUserText() {
   const userTextToBeDecrypted = textarea.value;
   const textValidatedToBeDecrypted = validateText(userTextToBeDecrypted)
@@ -64,6 +65,7 @@ function toDecryptTheUserText() {
   resultExibitionParagraph.innerHTML = textDecrypted;
 }
 
+//Function which will be called to decrypt characters from user text, after validation
 function decryptingCharacters(textToBeDecrypted) {
   let textInDecryptingProcess = textToBeDecrypted
     .replace("enter", "e")
