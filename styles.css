@@ -246,10 +246,14 @@ a i {
 }
 
 @media screen and (min-width: 1025px) {
+  body {
+    overflow: hidden;
+  }
   .container {
     gap: 6rem;
     max-height: 1600px;
-    padding: var(--container-padding-desktop);
+    padding-top: var(--container-padding-desktop);
+    padding-left: var(--container-padding-desktop);
   }
 
   header {
@@ -281,5 +285,24 @@ a i {
 
   .fotoPersonagem {
     width: 30rem;
+  }
+  
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  footer a {
+    font-size: 1.3rem;
+    color: var(--color-text-grey);
+    text-decoration: none;
+  }
+  
+  a i {
+    margin-right: 0.2rem;
   }
 }
