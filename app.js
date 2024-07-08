@@ -31,7 +31,7 @@ function validateText(textToBeValidated) {
   // .normalize("NFD")
   // .replace(/[\u0300-\u036f]/g, "");
 
-  const regexToValidateText = /^[a-z]+$/;
+  const regexToValidateText = /^[a-z\s]+$/;
 
   if (!regexToValidateText.test(textInValidator)) {
     alert("Por favor insira um texto válido");
