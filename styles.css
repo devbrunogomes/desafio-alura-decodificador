@@ -19,6 +19,7 @@
 body {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: var(--primary-color);
 }
 
@@ -185,12 +186,33 @@ aside button {
   width: 100%;
 }
 
+/*-------------- Footer --------------*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-direction: row;
+  width: 100%;
+}
+
+footer a {
+  font-size: 1.3rem;
+  color: var(--color-text-grey);
+  text-decoration: none;
+}
+
+a i {
+  margin-right: 0.2rem;
+}
+
 /*-------------- Media queries --------------*/
 
 @media screen and (min-width: 768px) {
   .container {
     flex-direction: row;
-    padding: 3.5rem 2rem;
+    /* padding: 3.5rem 2rem; */
   }
   .inputAndButtonsWrapper {
     padding-top: 4rem;
@@ -204,8 +226,21 @@ aside button {
     height: 44rem;
   }
 
+  aside h1 {
+    font-size: 2.5rem;
+    
+  }
+  
+  aside span {
+    font-size: 1.6rem;
+  }
+
   .fotoPersonagem {
     width: 25rem;
+  }
+
+  footer a{
+    font-size: 1.5rem;
   }
 
 }
